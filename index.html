@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin Emery - Cyber Professional</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 40%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .header h1 {
+            margin: 10px 0 0;
+        }
+        .header h2 {
+            margin: 5px 0 20px;
+            color: #777;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .content h3 {
+            color: #333;
+        }
+        .content p {
+            line-height: 1.6;
+        }
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .content li {
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            height: 100px;
+        }
+        .form-group button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/images/austin.avif" alt="Austin Emery">
+            <h1>Austin Emery</h1>
+            <h2>Cyber Professional</h2>
+        </div>
+        <div class="nav">
+            <a href="#about" onclick="openTab(event, 'about')">About Me</a>
+            <a href="#extras" onclick="openTab(event, 'extras')">Extras</a>
+            <a href="#projects" onclick="openTab(event, 'projects')">Projects</a>
+            <a href="#contact" onclick="openTab(event, 'contact')">Contact</a>
+        </div>
+        <div id="about" class="tab-content active">
+            <div class="content">
+                <h3>About Me</h3>
+                <p>As a proud Navy veteran with a passion for cybersecurity, I earned an AS degree in Cybersecurity and am currently pursuing a BS degree. My journey into cloud security is driven by a deep understanding of security fundamentals, risk management, and threat detection—reinforced by my CompTIA Security+ and AWS certifications.</p>
+                <p>I am actively building hands-on experience in cloud security through labs, projects, and internships, ensuring I stay ahead in this rapidly evolving field. My military background instilled in me critical problem-solving skills, attention to detail, and the ability to perform under pressure—qualities essential for securing cloud environments and protecting critical digital assets.</p>
+                <p>Dedicated to strengthening the cloud security landscape, I aim to help organizations implement robust security strategies, mitigate threats, and ensure compliance in cloud infrastructures. My mission is to contribute to a safer digital future by securing cloud environments and promoting best practices in cloud security.</p>
+                <h3>Education / Certifications</h3>
+                <img src="/images/4e8646_f94d32d94e0040bd85bd014a0686513b~mv2.avif" alt="AWS Cloud Practioner" style="width: 100px; height: auto;">
+                <img src="/images/4e8646_d27cf51bd6194e45865d059b3ba86fba~mv2.avif" alt="AWS Solutions Architect Associate" style="width: 100px; height: auto;">
+                <img src="/images/comptia-security-ce-certification.avif" alt="CompTIA Security+ Certification" style="width: 100px; height: auto;">
+                <img src="/images/4e8646_8e703d091ba94fcdbb33a7fe377f529a~mv2.avif" alt="CompTIA Network+ Certification" style="width: 100px; height: auto;">
+                <h4>2021-2023</h4>
+                <p><strong>AS Cybersecurity</strong><br>City College of San Francisco</p>
+                <p>Received instruction in security risks and protection techniques for mobile devices, WebApps, and network security. Graduated with honors & Deans' list in three of the four semesters. GPA 3.75</p>
+                <h4>2023 - Present</h4>
+                <p><strong>BS Cybersecurity</strong><br>DeVry University</p>
+                <p>Continuing education in the field of cybersecurity. Classes comprised of IoT, cloud computing, and operating systems in addition to general education required for degree.</p>
+            </div>
+        </div>
+        <div id="extras" class="tab-content">
+            <div class="content">
+                <h3>Extras</h3>
+                <p>I like to consider myself an avid reader, and here are some books I've read related to IT/Cyber/Security.</p>
+                <p>I'm always looking for a good read and would love any suggestions.</p>
+            </div>
+        </div>
+        <div id="projects" class="tab-content">
+            <div class="content">
+                <h3>Projects</h3>
+                <h4>AWS - Build A VPC</h4>
+                <p>Completed a Udemy lab on building a custom Amazon VPC with public and private subnets for EC2 deployments. This hands-on experience laid the foundation for understanding cloud infrastructure, strengthening my cloud security skills by reinforcing network design, segmentation, and secure deployments in AWS.</p>
+                <h4>AWS - Using CloudFormation</h4>
+                <p>Another Udemy lab where I learned to use CloudFormation to develop and implement a repeatable VPC template following best practices when it comes to cloud infrastructure.</p>
+                <h4>Creating a NAS for my SoHo</h4>
+                <p>RaspberryPi Project</p>
+                <p>Repurposing a 1TB hard drive into a Raspberry Pi NAS using OpenMediaVault.</p>
+            </div>
+        </div>
+        <div id="contact" class="tab-content">
+            <div class="content">
+                <h3>Contact</h3>
+                <p>Want to see my resume? Contact me here!</p>
+                <form action="/submit" method="post">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">SEND</button>
+                    </div>
+                </form>
+                <p>Thanks for submitting!</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Follow</p>
+            <a href="https://www.linkedin.com/in/austin-emery87/">LinkedIn</a>
+            <p>© 2025 by Austin Emery. Powered and secured by DannyFast</p>
+        </div>
+    </div>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+            }
+            tablinks = document.getElementsByClassName("nav a");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).className += " active";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
