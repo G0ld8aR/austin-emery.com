@@ -1,6 +1,6 @@
-npx wrangler kv key put --namespace-id=c9d0588c70314161b938a248b0fb6b3e "index.html" --path=../index.html --remote 
-npx wrangler kv key put --namespace-id=c9d0588c70314161b938a248b0fb6b3e "images/4e8646_8e703d091ba94fcdbb33a7fe377f529a~mv2.avif" --path=../images/4e8646_8e703d091ba94fcdbb33a7fe377f529a~mv2.avif --remote 
-npx wrangler kv key put --namespace-id=c9d0588c70314161b938a248b0fb6b3e "images/4e8646_f94d32d94e0040bd85bd014a0686513b~mv2.avif" --path=../images/4e8646_f94d32d94e0040bd85bd014a0686513b~mv2.avif --remote 
-npx wrangler kv key put --namespace-id=c9d0588c70314161b938a248b0fb6b3e "images/4e8646_d27cf51bd6194e45865d059b3ba86fba~mv2.avif" --path=../images/4e8646_d27cf51bd6194e45865d059b3ba86fba~mv2.avif --remote 
-npx wrangler kv key put --namespace-id=c9d0588c70314161b938a248b0fb6b3e "images/austin.avif" --path=../images/austin.avif --remote 
-npx wrangler kv key put --namespace-id=c9d0588c70314161b938a248b0fb6b3e "images/comptia-security-ce-certification.avif" --path=../images/comptia-security-ce-certification.avif --remote  
+npx wrangler kv key put --namespace-id=c9d0588c70314161b938a248b0fb6b3e "index.html" --path=src/index.html --remote
+npx wrangler kv key put --namespace-id=c9d0588c70314161b938a248b0fb6b3e "images/4e8646_8e703d091ba94fcdbb33a7fe377f529a~mv2.avif" --path=src/images/4e8646_8e703d091ba94fcdbb33a7fe377f529a~mv2.avif --remote
+npx wrangler kv key put --namespace-id=c9d0588c70314161b938a248b0fb6b3e "images/4e8646_f94d32d94e0040bd85bd014a0686513b~mv2.avif" --path=src/images/4e8646_f94d32d94e0040bd85bd014a0686513b~mv2.avif --remote
+npx wrangler kv key put --namespace-id=c9d0588c70314161b938a248b0fb6b3e "images/4e8646_d27cf51bd6194e45865d059b3ba86fba~mv2.avif" --path=src/images/4e8646_d27cf51bd6194e45865d059b3ba86fba~mv2.avif --remote
+npx wrangler kv key put --namespace-id=c9d0588c70314161b938a248b0fb6b3e "images/austin.avif" --path=src/images/austin.avif --remote
+npx wrangler kv key put --namespace-id=c9d0588c70314161b938a248b0fb6b3e "images/comptia-security-ce-certification.avif" --path=src/images/comptia-security-ce-certification.avif --remote
