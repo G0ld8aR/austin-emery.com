@@ -37,10 +37,10 @@
                     const result = await response.text();
                     document.getElementById('reviewContent').innerHTML = result;
                 } else {
-                    document.getElementById('reviewContent').innerHTML = `Error: ${response.statusText}`;
+                    document.getElementById('reviewContent').innerHTML = `Error: ${response}`;
                 }
             } catch (error) {
-                document.getElementById('reviewContent').innerHTML = `Error: ${error.message}`;
+                document.getElementById('reviewContent').innerHTML = `Error: ${error}`;
             }
         });
 

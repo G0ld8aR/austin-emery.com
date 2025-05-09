@@ -37,6 +37,10 @@ export default {
 		const url = new URL(request.url);
 		const pathname = url.pathname;
 
+		if (request.headers.get('x-forwarded-proto') !== 'https') {
+			return Response.redirect(`https://${request.headers.get('host')}${request.url.pathname}`, 301);
+		}
+
 		// Handle root path (serve index.html)
 		if (pathname === '/') {
 			const indexHtml = await KV.get('index.html', 'text');
@@ -48,7 +52,17 @@ export default {
 				return new Response('Index.html not found in KV', { status: 404 });
 			}
 		}
-
+		// Handle root path (serve review.html)
+		if (pathname === '/review' && request.method === 'GET') {
+			const htmlContent = await KV.get('review.html', 'text');
+			if (htmlContent) {
+				return new Response(htmlContent, {
+					headers: { 'content-type': 'text/html' },
+				});
+			} else {
+				return new Response(htmlContent + 'not found in KV', { status: 404 });
+			}
+		}
 		if (pathname.startsWith('/images')) {
 			const imageKey = pathname.slice(1); // Remove leading slash
 			console.log("imageKey",imageKey);
