@@ -47,3 +47,182 @@
           <div class="hero-hello">
             <h2>Hello</h2>
             <p class="muted">Here’s who I am and what I do.</p>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#projects">PROJECTS</a>
+            <a class="btn" href="#extras">EXTRAS</a>
+            <a class="btn" href="#contact">RESUME REQUEST</a>
+          </div>
+
+          <p class="hero-blurb">
+            Welcome to my portfolio. I share my journey in IT and cybersecurity, with a focus on
+            cloud security, hands on labs, and practical problem solving.
+            If you’re interested in my resume or background, feel free to reach out.
+          </p>
+        </div>
+
+        <aside class="hero-card">
+          <h3>Quick Summary</h3>
+          <ul>
+            <li>Cloud security focused and hands on</li>
+            <li>Navy veteran with calm under pressure troubleshooting</li>
+            <li>Building projects in AWS, scripting, and homelabs</li>
+          </ul>
+
+          <div class="mini-links">
+            <a href="https://www.linkedin.com/in/austin-emery87/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/G0ld8aR/austin-emery.com" target="_blank" rel="noopener">GitHub</a>
+            <a href="#contact">Resume request</a>
+          </div>
+        </aside>
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+
+        <div class="two-col">
+          <div class="card">
+            <p>
+              I am a Navy veteran with an AS in Cybersecurity and I am currently pursuing a BS in Cybersecurity.
+              My interest in cloud security comes from a strong foundation in security fundamentals,
+              risk management, and threat detection.
+            </p>
+
+            <p>
+              I am actively building hands on experience through labs, projects, and internships,
+              with a focus on AWS, scripting, and operational security.
+              My background has trained me to stay calm under pressure and solve problems methodically.
+            </p>
+
+            <p>
+              My goal is to help organizations secure their cloud environments through practical,
+              well documented, and realistic security solutions.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Education and Certifications</h3>
+
+            <div class="badge-row">
+              <div class="badge">CompTIA Security+</div>
+              <div class="badge">AWS Certification</div>
+              <div class="badge">IAT Level II</div>
+            </div>
+
+            <div class="edu">
+              <div class="edu-item">
+                <div class="edu-years">2021 – 2023</div>
+                <div class="edu-main">
+                  <div class="edu-title">AS Cybersecurity</div>
+                  <div class="edu-school">City College of San Francisco</div>
+                </div>
+              </div>
+
+              <div class="edu-item">
+                <div class="edu-years">2023 – Present</div>
+                <div class="edu-main">
+                  <div class="edu-title">BS Cybersecurity</div>
+                  <div class="edu-school">DeVry University</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <input id="projectFilter" class="input" type="search" placeholder="Filter projects by keyword" />
+        </div>
+
+        <div id="projectGrid" class="grid">
+          <article class="project" data-tags="powershell automation windows cleanup">
+            <h3>Clearing Out Screenshots and Empty Trash</h3>
+            <p>
+              PowerShell automation project to clear a screenshots folder and empty the recycle bin.
+              Built to learn scripting and automate repetitive tasks.
+            </p>
+            <div class="chips">
+              <span class="chip">PowerShell</span>
+              <span class="chip">Automation</span>
+              <span class="chip">Windows</span>
+            </div>
+            <div class="links">
+              <a href="https://4e8646e4-cc98-4640-b82f-63985d6b8ecf.usrfiles.com/ugd/4e8646_c7607a924e2d42d4a86a02453d442ed3.pdf" target="_blank" rel="noopener">
+                Write up (PDF)
+              </a>
+              <a href="https://github.com/G0ld8aR/austin-emery.com" target="_blank" rel="noopener">
+                Repo
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXTRAS -->
+    <section id="extras" class="section">
+      <div class="container">
+        <h2>Extras</h2>
+        <div class="card">
+          <p>
+            I enjoy reading books related to IT, cybersecurity, and cloud technologies.
+            I am always looking for good recommendations.
+          </p>
+
+          <div class="book-grid">
+            <div class="book">Book cover placeholder</div>
+            <div class="book">Book cover placeholder</div>
+            <div class="book">Book cover placeholder</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Want to see my resume? Contact me</h2>
+
+        <div class="two-col">
+          <div class="card">
+            <p class="muted">
+              Email is the fastest way to reach me. I respond on LinkedIn as well.
+            </p>
+
+            <div class="stack">
+              <a class="btn primary" href="mailto:you@example.com?subject=Resume%20Request%20-%20Austin%20Emery">
+                Email me
+              </a>
+              <a class="btn" href="https://www.linkedin.com/in/austin-emery87/" target="_blank" rel="noopener">
+                LinkedIn
+              </a>
+              <a class="btn" href="https://github.com/G0ld8aR/austin-emery.com" target="_blank" rel="noopener">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Austin Emery</p>
+      <p class="small muted">Hosted on Cloudflare Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
