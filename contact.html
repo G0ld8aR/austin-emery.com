@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Austin Emery for collaboration, networking, or resume requests." />
+  <meta name="theme-color" content="#101010" />
+  <title>Contact Austin Emery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a href="index.html#home" class="brand" aria-label="Austin Emery home">
+        <span class="brand-mark">AE</span>
+        <span class="brand-copy">
+          <strong>Austin Emery</strong>
+          <span>Cyber Professional • Cloud Security</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav">
+        <a href="index.html#about">ABOUT</a>
+        <a href="index.html#projects">PROJECTS</a>
+        <a href="index.html#extras">EXTRAS</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-page section">
+        <div class="contact-page-grid reveal">
+          <div class="contact-page-copy">
+            <p class="section-kicker">GET IN TOUCH</p>
+            <h1>Want to Connect or Ask For My Resume?</h1>
+            <p>
+              Send me your email and a quick message. Whether it is about a role, a project, networking, or a resume
+              request, I will be glad to take a look.
+            </p>
+            <div class="contact-page-links">
+              <a class="pill-btn" href="index.html">Back to Home</a>
+              <a class="pill-btn pill-btn-light" href="https://www.linkedin.com/in/austin-emery87" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="contact-form-card reveal">
+            <form action="https://formsubmit.co/afemery87@gmail.com" method="POST" class="resume-form">
+              <input type="hidden" name="_subject" value="Portfolio contact from austin-emery.com" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://austin-emery.com/contact.html?sent=1" />
+
+              <label for="email">Your email</label>
+              <input id="email" name="email" type="email" placeholder="name@example.com" required />
+
+              <label for="message">Quick message</label>
+              <textarea id="message" name="message" rows="7" placeholder="Hi Austin, I would like to connect and request your resume..." required></textarea>
+
+              <button type="submit" class="form-submit-btn">Send</button>
+              <p class="form-note">This form sends your message to Austin&apos;s email inbox.</p>
+              <p class="form-success" id="form-success" hidden>Thanks. Your message was sent.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Austin Emery</p>
+      <p>Hosted on Cloudflare Pages</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

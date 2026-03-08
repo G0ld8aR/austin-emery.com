@@ -1,30 +1,47 @@
-const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+const menuToggle = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('.site-nav');
+const navLinks = document.querySelectorAll('.site-nav a');
+const yearEl = document.getElementById('year');
+const reveals = document.querySelectorAll('.reveal');
 
-const input = document.getElementById("projectFilter");
-const grid = document.getElementById("projectGrid");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
-if (input && grid) {
-  input.addEventListener("input", () => {
-    const q = input.value.trim().toLowerCase();
-    const cards = grid.querySelectorAll(".project");
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!expanded));
+    siteNav.classList.toggle('is-open');
+  });
 
-    cards.forEach(card => {
-      const text = (card.textContent || "").toLowerCase();
-      const tags = (card.getAttribute("data-tags") || "").toLowerCase();
-      const match = !q || text.includes(q) || tags.includes(q);
-      card.style.display = match ? "" : "none";
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      siteNav.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
     });
   });
 }
 
-const form = document.getElementById("contactForm");
-const msg = document.getElementById("formMsg");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  }
+);
 
-if (form && msg) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    msg.textContent = "Received. Next step is wiring this to a form backend so it actually sends.";
-    form.reset();
-  });
+reveals.forEach((item) => observer.observe(item));
+
+
+const params = new URLSearchParams(window.location.search);
+const formSuccess = document.getElementById('form-success');
+if (params.get('sent') === '1' && formSuccess) {
+  formSuccess.hidden = false;
 }

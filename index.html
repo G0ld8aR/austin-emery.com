@@ -1,227 +1,316 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Austin Emery | Cloud Security Portfolio</title>
-  <meta name="description" content="Austin Emery portfolio. Cloud security focused projects, education, and hands on labs." />
-
-  <!-- Favicon -->
-  <link rel="icon" href="/assets/favicon.ico">
-
-  <!-- Styles -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Austin Emery portfolio website featuring cloud security, cybersecurity, and hands on technical projects." />
+  <meta name="theme-color" content="#101010" />
+  <title>Austin Emery | Cybersecurity & Cloud Security Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Home">
+  <div class="site-shell">
+    <header class="topbar">
+      <a href="#home" class="brand" aria-label="Austin Emery home">
         <span class="brand-mark">AE</span>
-        <span class="brand-text">
-          <span class="brand-name">Austin Emery</span>
-          <span class="brand-sub">Cyber Professional • Cloud Security</span>
+        <span class="brand-copy">
+          <strong>Austin Emery</strong>
+          <span>Cyber Professional • Cloud Security</span>
         </span>
       </a>
 
-      <nav class="nav">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav">
         <a href="#about">ABOUT</a>
         <a href="#projects">PROJECTS</a>
         <a href="#extras">EXTRAS</a>
-        <a href="#contact">CONTACT</a>
+        <a href="contact.html">CONTACT</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-left">
-          <p class="kicker">IAT Level II Certified</p>
-          <h1>Austin Emery</h1>
-          <p class="hero-role">Cyber Professional</p>
-          <p class="hero-focus">Cloud Security</p>
-
-          <div class="hero-hello">
-            <h2>Hello</h2>
-            <p class="muted">Here’s who I am and what I do.</p>
-          </div>
-
-          <div class="cta-row">
-            <a class="btn primary" href="#projects">PROJECTS</a>
-            <a class="btn" href="#extras">EXTRAS</a>
-            <a class="btn" href="#contact">RESUME REQUEST</a>
-          </div>
-
-          <p class="hero-blurb">
-            Welcome to my portfolio. I share my journey in IT and cybersecurity, with a focus on
-            cloud security, hands on labs, and practical problem solving.
-            If you’re interested in my resume or background, feel free to reach out.
-          </p>
+    <main>
+      <section id="home" class="hero section">
+        <div class="hero-art" aria-hidden="true">
+          <div class="circuit circuit-a"></div>
+          <div class="circuit circuit-b"></div>
+          <div class="circuit circuit-c"></div>
+          <div class="circuit circuit-d"></div>
+          <div class="chip chip-a"></div>
+          <div class="chip chip-b"></div>
+          <div class="node node-a"></div>
+          <div class="node node-b"></div>
+          <div class="node node-c"></div>
+          <div class="node node-d"></div>
+          <div class="node node-e"></div>
         </div>
 
-        <aside class="hero-card">
-          <h3>Quick Summary</h3>
-          <ul>
-            <li>Cloud security focused and hands on</li>
-            <li>Navy veteran with calm under pressure troubleshooting</li>
-            <li>Building projects in AWS, scripting, and homelabs</li>
-          </ul>
-
-          <div class="mini-links">
-            <a href="https://www.linkedin.com/in/austin-emery87/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/G0ld8aR/austin-emery.com" target="_blank" rel="noopener">GitHub</a>
-            <a href="#contact">Resume request</a>
-          </div>
-        </aside>
-      </div>
-      <div class="hero-glow" aria-hidden="true"></div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About Me</h2>
-
-        <div class="two-col">
-          <div class="card">
-            <p>
-              I am a Navy veteran with an AS in Cybersecurity and I am currently pursuing a BS in Cybersecurity.
-              My interest in cloud security comes from a strong foundation in security fundamentals,
-              risk management, and threat detection.
-            </p>
-
-            <p>
-              I am actively building hands on experience through labs, projects, and internships,
-              with a focus on AWS, scripting, and operational security.
-              My background has trained me to stay calm under pressure and solve problems methodically.
-            </p>
-
-            <p>
-              My goal is to help organizations secure their cloud environments through practical,
-              well documented, and realistic security solutions.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Education and Certifications</h3>
-
-            <div class="badge-row">
-              <div class="badge">CompTIA Security+</div>
-              <div class="badge">AWS Certification</div>
-              <div class="badge">IAT Level II</div>
-            </div>
-
-            <div class="edu">
-              <div class="edu-item">
-                <div class="edu-years">2021 – 2023</div>
-                <div class="edu-main">
-                  <div class="edu-title">AS Cybersecurity</div>
-                  <div class="edu-school">City College of San Francisco</div>
-                </div>
-              </div>
-
-              <div class="edu-item">
-                <div class="edu-years">2023 – Present</div>
-                <div class="edu-main">
-                  <div class="edu-title">BS Cybersecurity</div>
-                  <div class="edu-school">DeVry University</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>Projects</h2>
-          <input id="projectFilter" class="input" type="search" placeholder="Filter projects by keyword" />
-        </div>
-
-        <div id="projectGrid" class="grid">
-          <article class="project" data-tags="powershell automation windows cleanup">
-            <h3>Clearing Out Screenshots and Empty Trash</h3>
-            <p>
-              PowerShell automation project to clear a screenshots folder and empty the recycle bin.
-              Built to learn scripting and automate repetitive tasks.
-            </p>
-            <div class="chips">
-              <span class="chip">PowerShell</span>
-              <span class="chip">Automation</span>
-              <span class="chip">Windows</span>
-            </div>
-            <div class="links">
-              <a href="https://4e8646e4-cc98-4640-b82f-63985d6b8ecf.usrfiles.com/ugd/4e8646_c7607a924e2d42d4a86a02453d442ed3.pdf" target="_blank" rel="noopener">
-                Write up (PDF)
-              </a>
-              <a href="https://github.com/G0ld8aR/austin-emery.com" target="_blank" rel="noopener">
-                Repo
-              </a>
+        <div class="hero-grid">
+          <article class="profile-card reveal">
+            <img 
+              src="assets/images/austin-emery-headshot.png" 
+              alt="Austin Emery - Cybersecurity Professional"
+              class="profile-image"
+            />
+            <h1>Austin<br />Emery</h1>
+            <div class="profile-divider"></div>
+            <p class="profile-role">Cyber Professional</p>
+            <p class="profile-sub">Cloud Security</p>
+            <p class="profile-sub">IAT Level II Certified</p>
+            <div class="profile-links">
+              <a href="https://www.linkedin.com/in/austin-emery87" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://github.com/G0ld8aR" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- EXTRAS -->
-    <section id="extras" class="section">
-      <div class="container">
-        <h2>Extras</h2>
-        <div class="card">
-          <p>
-            I enjoy reading books related to IT, cybersecurity, and cloud technologies.
-            I am always looking for good recommendations.
-          </p>
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Cybersecurity • Cloud • Hands on Projects</p>
+            <h2>Hello</h2>
+            <h3>Here&apos;s who I am and what I do.</h3>
 
-          <div class="book-grid">
-            <div class="book">Book cover placeholder</div>
-            <div class="book">Book cover placeholder</div>
-            <div class="book">Book cover placeholder</div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="hero-actions">
+              <a class="pill-btn" href="#projects">PROJECTS</a>
+              <a class="pill-btn pill-btn-light" href="contact.html">RESUME</a>
+            </div>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section alt">
-      <div class="container">
-        <h2>Want to see my resume? Contact me</h2>
-
-        <div class="two-col">
-          <div class="card">
-            <p class="muted">
-              Email is the fastest way to reach me. I respond on LinkedIn as well.
+            <p class="hero-text">
+              Welcome to my portfolio. I share my journey in IT and cybersecurity with a focus on cloud security,
+              practical labs, scripting, and project based learning. I like building things that solve real problems,
+              document the process clearly, and show the kind of work I can bring to a team.
             </p>
 
-            <div class="stack">
-              <a class="btn primary" href="mailto:you@example.com?subject=Resume%20Request%20-%20Austin%20Emery">
-                Email me
-              </a>
-              <a class="btn" href="https://www.linkedin.com/in/austin-emery87/" target="_blank" rel="noopener">
-                LinkedIn
-              </a>
-              <a class="btn" href="https://github.com/G0ld8aR/austin-emery.com" target="_blank" rel="noopener">
-                GitHub
-              </a>
-            </div>
+            <ul class="quick-points">
+              <li>Navy veteran with calm under pressure troubleshooting</li>
+              <li>Focused on cloud security, AWS, and defensive security practices</li>
+              <li>Building a portfolio through labs, automation, and hardware projects</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="footer">
-    <div class="container footer-inner">
+      <section id="about" class="about section section-dark">
+        <div class="narrow reveal">
+          <p class="section-kicker">PROFILE</p>
+          <h2>About Me.</h2>
+          <p>
+            I am a proud Navy veteran with an AS in Cybersecurity and I am currently pursuing a BS in Cybersecurity.
+            My path into cloud security is built on a foundation of security fundamentals, risk management, systems
+            administration, and hands on technical troubleshooting.
+          </p>
+          <p>
+            I have been developing practical experience through cloud labs, internships, scripting projects, and
+            portfolio work that reflects real operational thinking. My military background shaped how I approach
+            problems: stay calm, pay attention to details, document the work, and finish the mission.
+          </p>
+          <p>
+            My goal is to help organizations secure cloud environments, improve visibility, and build security
+            processes that are realistic, useful, and resilient.
+          </p>
+        </div>
+      </section>
+
+      <section class="education section">
+        <div class="content-grid">
+          <div class="section-heading reveal">
+            <p class="section-kicker">BACKGROUND</p>
+            <h2>Education / Certifications</h2>
+          </div>
+
+          <div class="cert-strip reveal" aria-label="Certifications">
+            <span class="cert-badge">Security+</span>
+            <span class="cert-badge">Network+</span>
+            <span class="cert-badge">AWS</span>
+            <span class="cert-badge">IAT II</span>
+          </div>
+
+          <div class="timeline reveal">
+            <article class="timeline-item">
+              <div class="timeline-year">2021–2023</div>
+              <div class="timeline-body">
+                <h3>AS Cybersecurity</h3>
+                <h4>City College of San Francisco</h4>
+                <p>
+                  Studied security risks, web applications, mobile device protection, and network security. Graduated
+                  with honors and made the Dean&apos;s List in three of four semesters.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-year">2023–Present</div>
+              <div class="timeline-body">
+                <h3>BS Cybersecurity</h3>
+                <h4>DeVry University</h4>
+                <p>
+                  Continuing coursework in cybersecurity, cloud computing, IoT, systems administration, and broader IT
+                  infrastructure topics that support secure operations.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects section section-light">
+        <div class="content-grid">
+          <div class="section-heading reveal">
+            <p class="section-kicker">PORTFOLIO</p>
+            <h2>Projects</h2>
+            <p class="section-intro">
+              A mix of cloud, security, scripting, and hardware work that shows how I think through design,
+              implementation, and troubleshooting.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <div class="project-tag">Web • Portfolio</div>
+              <h3>Portfolio Website</h3>
+              <p>
+                The Cloudflare Pages portfolio site you are on right now, built to showcase my background, projects,
+                certifications, and hands on technical work in a cleaner and more personal format.
+              </p>
+              <div class="project-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Cloudflare Pages</span>
+              </div>
+              <div class="project-links">
+                <a href="https://austin-emery.com/" target="_blank" rel="noreferrer">Live Site</a>
+                <a href="https://github.com/G0ld8aR/austin-emery.com" target="_blank" rel="noreferrer">GitHub Repo</a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-tag">IoT • Embedded Systems</div>
+              <h3>ESP32 Solar Weather Station</h3>
+              <p>
+                A solar powered weather station built around Heltec and ESP32 hardware, environmental sensors, battery
+                power, custom wiring, and field oriented troubleshooting. This is one of my biggest hands on builds.
+              </p>
+              <div class="project-stack">
+                <span>ESP32</span>
+                <span>LoRa</span>
+                <span>Sensors</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/G0ld8aR/Weather-Station-IoT" target="_blank" rel="noreferrer">GitHub Repo</a>
+                <a href="contact.html">Request details</a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-tag">AWS • Monitoring</div>
+              <h3>SentinelShield Log Auditing Lab</h3>
+              <p>
+                An AWS logging and monitoring solution centered on CloudTrail and CloudWatch to improve visibility,
+                alerting, audit readiness, and incident awareness in a fictional enterprise environment.
+              </p>
+              <div class="project-stack">
+                <span>AWS</span>
+                <span>CloudTrail</span>
+                <span>CloudWatch</span>
+              </div>
+              <div class="project-links">
+                <a href="https://www.linkedin.com/in/austin-emery87" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a href="contact.html">Ask for write up</a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-tag">Research • Cloud Security</div>
+              <h3>Guardians of the Cloud</h3>
+              <p>
+                A capstone style research project focused on ethical cloud security, zero trust ideas, AI impact, and
+                the shared responsibility model across modern cloud environments.
+              </p>
+              <div class="project-stack">
+                <span>Research</span>
+                <span>Cloud Security</span>
+                <span>Zero Trust</span>
+              </div>
+              <div class="project-links">
+                <a href="contact.html">Ask for presentation</a>
+                <a href="https://github.com/G0ld8aR" target="_blank" rel="noreferrer">More work</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="extras" class="extras section">
+        <div class="content-grid extras-grid">
+          <div class="section-heading reveal">
+            <p class="section-kicker">MORE</p>
+            <h2>Extras</h2>
+            <p class="section-intro">
+              A few interests outside the main project section that still connect back to how I learn and stay curious.
+            </p>
+          </div>
+
+          <div class="extras-cards">
+            <article class="extra-card reveal">
+              <span class="extra-label">Reading</span>
+              <h3>Books & Learning</h3>
+              <p>
+                I like reading about cybersecurity, cloud technology, and practical IT operations. That usually turns
+                into notes, experiments, and more ideas for future projects.
+              </p>
+            </article>
+
+            <article class="extra-card reveal">
+              <span class="extra-label">Building</span>
+              <h3>Hardware & Troubleshooting</h3>
+              <p>
+                I spend a lot of time building, rewiring, testing, and iterating on electronics and system setups. I
+                like understanding how the pieces actually work together.
+              </p>
+            </article>
+
+            <article class="extra-card reveal">
+              <span class="extra-label">Career</span>
+              <h3>Growth Mindset</h3>
+              <p>
+                I am focused on growing into cloud security and security operations work while continuing to sharpen my
+                technical writing, documentation, and communication.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section section-dark">
+        <div class="content-grid contact-grid reveal">
+          <div>
+            <p class="section-kicker">CONTACT</p>
+            <h2>Want to connect?</h2>
+            <p>
+              Use the contact page if you want to reach out, ask for my resume, or send a quick note. You can also
+              connect with me on LinkedIn or browse more of my work on GitHub.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="contact-btn" href="contact.html">Resume / Contact Page</a>
+            <a class="contact-btn contact-btn-secondary" href="https://www.linkedin.com/in/austin-emery87" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="contact-btn contact-btn-secondary" href="https://github.com/G0ld8aR" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
       <p>© <span id="year"></span> Austin Emery</p>
-      <p class="small muted">Hosted on Cloudflare Pages</p>
-    </div>
-  </footer>
+      <p>Hosted on Cloudflare Pages</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
