@@ -131,3 +131,27 @@ h3{font-size:1.28rem; line-height:1.2}
   .compact-certs a{width:82px; min-height:82px}
   .compact-certs img{max-height:44px}
 }
+
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.social-icon-links{gap:.8rem}
+.social-logo{width:46px;height:46px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#dbe7fa}
+.social-logo svg{width:22px;height:22px}
+.social-logo.linkedin{color:#7ec0ff}
+.social-logo.github{color:#f4f7ff}
+.social-logo.credly{color:#ffb454}
+.social-logo:hover{transform:translateY(-1px);color:var(--text)}
+.simple-grid{grid-template-columns:repeat(5,1fr)}
+.simple-card{min-height:148px;display:flex;flex-direction:column;justify-content:flex-end;transition:.2s ease}
+.simple-card h3{margin-bottom:0}
+.simple-card:hover{transform:translateY(-4px);border-color:rgba(143,211,255,.22)}
+.hero-image{aspect-ratio:4/4.25;object-position:center top}
+.contact-layout{grid-template-columns:minmax(0,1fr) minmax(320px,.9fr)}
+.contact-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.25rem}
+.contact-form{display:grid;gap:.95rem;margin-top:1rem}
+.contact-form label{display:grid;gap:.35rem}
+.contact-form span{font-size:.92rem;color:var(--muted)}
+.contact-form input,.contact-form textarea{width:100%;padding:.85rem 1rem;border-radius:16px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04);color:var(--text);font:inherit}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:rgba(143,211,255,.35);box-shadow:0 0 0 3px rgba(93,177,255,.12)}
+@media (max-width: 1100px){.simple-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width: 980px){.contact-layout,.simple-grid{grid-template-columns:1fr}}
