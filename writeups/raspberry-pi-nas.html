@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raspberry Pi Nas | Austin Emery</title>
+  <meta name="description" content="Austin Emery portfolio website covering cybersecurity, cloud security, projects, certifications, and technical writing.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="brand-mark">AE</div>
+      <div class="brand-copy">
+        <span>Austin Emery</span>
+        <span class="sub">Cybersecurity and cloud security portfolio</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="about.html">About Me</a>
+      <a href="credentials.html">Credentials</a>
+      <a href="projects.html">Projects</a>
+      <a href="extras.html">Extras</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="container article-shell">
+    <article class="panel article">
+      <a class="back-link" href="../projects.html">← Back to projects</a>
+      <p class="section-kicker">Home Lab Project</p>
+      <h1 style="font-size:clamp(2rem,4vw,3.2rem)">Revamping a 1TB Hard Drive into a Raspberry Pi NAS with OpenMediaVault</h1>
+      <p>With storage always becoming more important, I decided to repurpose a 1TB external hard drive into a network attached storage setup using a Raspberry Pi 4 and OpenMediaVault.</p>
+      <h2 style="font-size:1.4rem">Setup process</h2>
+      <p>I followed a guide from Pimylifeup.com to get the project moving, but ran into an issue when a reboot disabled the eth0 interface. That meant I had to stop, reflash the Raspberry Pi OS with a 64 bit headless install, and recover the setup before I could keep going.</p>
+      <h2 style="font-size:1.4rem">What worked</h2>
+      <p>Once the system was back on track, OpenMediaVault made the actual NAS setup pretty smooth. I was able to configure the storage, test it by backing up a local downloads folder, and verify that transfer speeds over ethernet were solid.</p>
+      <h2 style="font-size:1.4rem">What I learned</h2>
+      <p>One issue that came up later was that mapping the drive to multiple machines required creating additional users, which was a good reminder that usability details matter too. Overall, the project turned out to be a practical and worthwhile DIY build that added useful storage while giving me more experience with Linux style troubleshooting and networked systems.</p>
+    </article>
+    <aside class="panel article">
+      <p class="section-kicker">Topics</p>
+      <div class="tags"><span>Raspberry Pi</span><span>OpenMediaVault</span><span>NAS</span><span>Storage</span><span>Ethernet</span><span>Troubleshooting</span></div>
+    </aside>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-row">
+    <div>© Austin Emery</div>
+    <div>Hosted on Cloudflare Pages</div>
+  </div>
+</footer>
+</body>
+</html>

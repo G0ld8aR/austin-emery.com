@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aws Cloudformation | Austin Emery</title>
+  <meta name="description" content="Austin Emery portfolio website covering cybersecurity, cloud security, projects, certifications, and technical writing.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="brand-mark">AE</div>
+      <div class="brand-copy">
+        <span>Austin Emery</span>
+        <span class="sub">Cybersecurity and cloud security portfolio</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="about.html">About Me</a>
+      <a href="credentials.html">Credentials</a>
+      <a href="projects.html">Projects</a>
+      <a href="extras.html">Extras</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="container article-shell">
+    <article class="panel article">
+      <a class="back-link" href="../projects.html">← Back to projects</a>
+      <p class="section-kicker">AWS Infrastructure as Code</p>
+      <h1 style="font-size:clamp(2rem,4vw,3.2rem)">Define Cloud Infrastructure and Reusable Components Using AWS CloudFormation</h1>
+      <p>This lab was built around a FinTechBuddy scenario and focused on defining cloud infrastructure in code instead of building it by hand. The goal was to use CloudFormation and StackSets to provision reusable networking and application components across multiple AWS regions.</p>
+      <h2 style="font-size:1.4rem">Core tasks</h2>
+      <p>The work started by creating the administration and execution roles needed for AWS CloudFormation. After the IAM roles were in place, the next step was to create a networking StackSet and then build the application infrastructure stack on top of it.</p>
+      <p>The application layer used CloudFormation StackSets to provision public EC2 instances in both Northern Virginia and Oregon. That made the deployment more repeatable and showed how reusable components help standardize infrastructure across regions.</p>
+      <h2 style="font-size:1.4rem">Update and improvement</h2>
+      <p>The lab also included an update step where the EC2 instance type was changed from t2.micro to t2.small. That part stood out because it showed the value of Infrastructure as Code pretty clearly. Instead of rebuilding everything manually, the template could be revised and the stack could be updated in a controlled way.</p>
+      <h2 style="font-size:1.4rem">Why it matters</h2>
+      <p>This project reinforced the idea that cloud work is stronger when it is repeatable, documented, and easy to update. For security and operations roles, that kind of consistency matters.</p>
+    </article>
+    <aside class="panel article">
+      <p class="section-kicker">Topics</p>
+      <div class="tags"><span>AWS</span><span>CloudFormation</span><span>IaC</span><span>StackSets</span><span>IAM</span><span>Multi region</span></div>
+      <div class="link-row"><a href="../Define%20Cloud%20Infrastructure%20and%20Reusable%20Components%20Using%20AWS%20CloudFormation.pdf">Open PDF copy</a></div>
+    </aside>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-row">
+    <div>© Austin Emery</div>
+    <div>Hosted on Cloudflare Pages</div>
+  </div>
+</footer>
+</body>
+</html>

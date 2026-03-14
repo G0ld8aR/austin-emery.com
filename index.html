@@ -1,351 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Austin Emery portfolio website featuring cloud security, cybersecurity, cloud labs, and hands on technical projects." />
-  <meta name="theme-color" content="#0b1020" />
-  <title>Austin Emery | Cybersecurity & Cloud Security Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Austin Emery | Portfolio</title>
+  <meta name="description" content="Austin Emery portfolio website covering cybersecurity, cloud security, projects, certifications, and technical writing.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="site-shell">
-    <header class="topbar">
-      <a href="#home" class="brand" aria-label="Austin Emery home">
-        <span class="brand-mark">AE</span>
-        <span class="brand-copy">
-          <strong>Austin Emery</strong>
-          <span>Cybersecurity • Cloud Security • Portfolio</span>
-        </span>
-      </a>
-
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav id="site-nav" class="site-nav">
-        <a href="#about">ABOUT</a>
-        <a href="#credentials">CREDENTIALS</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#extras">EXTRAS</a>
-        <a href="contact.html">CONTACT</a>
-      </nav>
-    </header>
-
-    <main>
-      <section id="home" class="hero section">
-        <div class="hero-grid">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">Cloud Security • Cybersecurity • Hands On Technical Work</p>
-            <h1>Building a portfolio around real work, clear documentation, and practical security thinking.</h1>
-            <p class="hero-text">
-              I am Austin Emery, a Navy veteran and cybersecurity student focused on cloud security, defensive operations,
-              and project driven learning. This site highlights the work I have been building across AWS labs, technical
-              write ups, hardware projects, and portfolio development.
-            </p>
-
-            <div class="hero-actions">
-              <a class="pill-btn" href="#projects">View Projects</a>
-              <a class="pill-btn pill-btn-light" href="contact.html">Resume / Contact</a>
-            </div>
-
-            <div class="hero-highlights">
-              <div class="highlight-card">
-                <span class="highlight-label">Focus</span>
-                <strong>Cloud security, infrastructure, monitoring, and troubleshooting</strong>
-              </div>
-              <div class="highlight-card">
-                <span class="highlight-label">Background</span>
-                <strong>Navy veteran with an AS in Cybersecurity and ongoing BS studies</strong>
-              </div>
-              <div class="highlight-card">
-                <span class="highlight-label">Approach</span>
-                <strong>Calm under pressure, detail oriented, and hands on with systems</strong>
-              </div>
-            </div>
-          </div>
-
-          <aside class="profile-panel reveal">
-            <img
-              src="assets/images/austin-emery-headshot.png"
-              alt="Austin Emery headshot"
-              class="profile-image"
-            />
-            <div class="profile-panel-body">
-              <p class="profile-kicker">Austin Emery</p>
-              <h2>Cybersecurity and Cloud Security</h2>
-              <p class="profile-summary">
-                AWS certified, CompTIA certified, and building a portfolio centered on real labs, structured write ups,
-                and technical problem solving.
-              </p>
-
-              <ul class="quick-points">
-                <li>IAT Level II aligned credentials</li>
-                <li>AWS and CompTIA certification track</li>
-                <li>Cloudflare hosted portfolio with Git based workflow</li>
-              </ul>
-
-              <div class="profile-links">
-                <a href="https://www.linkedin.com/in/austin-emery87" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a href="https://github.com/G0ld8aR" target="_blank" rel="noreferrer">GitHub</a>
-                <a href="https://www.credly.com/users/austin-emery.a2485051/badges" target="_blank" rel="noopener noreferrer">Credly</a>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section id="about" class="about section section-dark">
-        <div class="content-grid about-grid">
-          <div class="section-heading reveal">
-            <p class="section-kicker">PROFILE</p>
-            <h2>About Me</h2>
-          </div>
-
-          <div class="about-copy reveal">
-            <p>
-              My path into cybersecurity and cloud security is built on military experience, technical troubleshooting,
-              and steady growth through labs, coursework, internships, and portfolio projects. I like work that combines
-              analysis, documentation, and practical implementation.
-            </p>
-            <p>
-              A lot of what you will see here reflects how I learn. I do not just finish an assignment and move on. I
-              usually build it out further, document what worked, and turn it into something useful for future reference.
-            </p>
-            <p>
-              The goal of this portfolio is simple: show real progress, real work, and the kind of mindset I bring to a
-              cloud security or security operations team.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="credentials" class="education section">
-        <div class="content-grid">
-          <div class="section-heading reveal">
-            <p class="section-kicker">BACKGROUND</p>
-            <h2>Education and Credentials</h2>
-          </div>
-
-          <div class="credentials-grid reveal">
-            <a class="cert-card" href="https://www.credly.com/users/austin-emery.a2485051/badges" target="_blank" rel="noopener noreferrer" aria-label="View AWS Certified Cloud Practitioner badge on Credly">
-              <img src="aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner badge" />
-            </a>
-            <a class="cert-card" href="https://www.credly.com/users/austin-emery.a2485051/badges" target="_blank" rel="noopener noreferrer" aria-label="View AWS Certified Solutions Architect Associate badge on Credly">
-              <img src="aws-certified-solutions-architect-associate.png" alt="AWS Certified Solutions Architect Associate badge" />
-            </a>
-            <a class="cert-card" href="https://www.credly.com/users/austin-emery.a2485051/badges" target="_blank" rel="noopener noreferrer" aria-label="View CompTIA Security Plus badge on Credly">
-              <img src="comptia-security-ce-certification.png" alt="CompTIA Security Plus badge" />
-            </a>
-            <a class="cert-card" href="https://www.credly.com/users/austin-emery.a2485051/badges" target="_blank" rel="noopener noreferrer" aria-label="View CompTIA Network Plus badge on Credly">
-              <img src="comptia-network-ce-certification.1.png" alt="CompTIA Network Plus badge" />
-            </a>
-          </div>
-
-          <div class="timeline reveal">
-            <article class="timeline-item">
-              <div class="timeline-year">2021 to 2023</div>
-              <div class="timeline-body">
-                <h3>AS in Cybersecurity</h3>
-                <h4>City College of San Francisco</h4>
-                <p>
-                  Studied security risks, web applications, mobile device protection, and network security. Graduated
-                  with honors and made the Dean&apos;s List in three of four semesters.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-year">2023 to Present</div>
-              <div class="timeline-body">
-                <h3>BS in Cybersecurity</h3>
-                <h4>DeVry University</h4>
-                <p>
-                  Continuing coursework in cybersecurity, cloud computing, IoT, systems administration, and IT
-                  infrastructure topics that support secure operations.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="projects section section-light">
-        <div class="content-grid">
-          <div class="section-heading reveal">
-            <p class="section-kicker">PORTFOLIO</p>
-            <h2>Featured Projects</h2>
-            <p class="section-intro">
-              These links point to live repo content, project repositories, and technical write ups that are already in
-              Git so the portfolio can act like a clean front door to the work itself.
-            </p>
-          </div>
-
-          <div class="project-grid">
-            <article class="project-card reveal">
-              <div class="project-tag">Web Portfolio</div>
-              <h3>Portfolio Website</h3>
-              <p>
-                The Cloudflare Pages site you are on now. Built as a cleaner portfolio home for projects,
-                certifications, and technical writing, with source control managed through GitHub.
-              </p>
-              <div class="project-stack">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Cloudflare Pages</span>
-              </div>
-              <div class="project-links">
-                <a href="https://austin-emery.com/" target="_blank" rel="noreferrer">Live Site</a>
-                <a href="https://github.com/G0ld8aR/austin-emery.com" target="_blank" rel="noreferrer">Repository</a>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-tag">IoT and Embedded Systems</div>
-              <h3>ESP32 Solar Weather Station</h3>
-              <p>
-                A custom weather station build centered on ESP32 hardware, sensors, field wiring, power planning, and
-                iterative hardware troubleshooting. This is one of the strongest hands on builds in the portfolio.
-              </p>
-              <div class="project-stack">
-                <span>ESP32</span>
-                <span>LoRa</span>
-                <span>Sensors</span>
-                <span>Hardware Debugging</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/G0ld8aR/Weather-Station-IoT" target="_blank" rel="noreferrer">Repository</a>
-                <a href="https://github.com/G0ld8aR/Weather-Station-IoT/blob/main/README.md" target="_blank" rel="noreferrer">README</a>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-tag">AWS Lab</div>
-              <h3>AWS VPC Lab Experience</h3>
-              <p>
-                A write up focused on AWS VPC implementation and lab work, showing practical cloud networking exposure
-                and how I document technical work in a way that is easy to review later.
-              </p>
-              <div class="project-stack">
-                <span>AWS</span>
-                <span>VPC</span>
-                <span>Networking</span>
-                <span>Technical Writing</span>
-              </div>
-              <div class="project-links">
-                <a href="AWS%20VPC%20Lab%20Experience.docx" target="_blank" rel="noreferrer">Open Write Up</a>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-tag">AWS Infrastructure as Code</div>
-              <h3>AWS CloudFormation Write Up</h3>
-              <p>
-                A project focused on defining reusable cloud infrastructure and documenting the process in both PDF and
-                Word formats, useful for showing cloud architecture thinking and structured delivery.
-              </p>
-              <div class="project-stack">
-                <span>AWS</span>
-                <span>CloudFormation</span>
-                <span>Infrastructure as Code</span>
-                <span>Documentation</span>
-              </div>
-              <div class="project-links">
-                <a href="Define%20Cloud%20Infrastructure%20and%20Reusable%20Components%20Using%20AWS%20CloudFormation.pdf" target="_blank" rel="noreferrer">Open PDF</a>
-                <a href="Define%20Cloud%20Infrastructure%20and%20Reusable%20Components%20Using%20AWS%20CloudFormation.docx" target="_blank" rel="noreferrer">Open DOCX</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="extras" class="extras section">
-        <div class="content-grid">
-          <div class="section-heading reveal">
-            <p class="section-kicker">EXTRAS</p>
-            <h2>More Work and Supporting Material</h2>
-            <p class="section-intro">
-              These are additional write ups, presentations, and reading notes already uploaded in the repo that help
-              round out the portfolio.
-            </p>
-          </div>
-
-          <div class="extras-cards">
-            <article class="extra-card reveal">
-              <span class="extra-label">Infrastructure</span>
-              <h3>Raspberry Pi NAS Write Up</h3>
-              <p>
-                A write up on repurposing a 1TB hard drive into a Raspberry Pi NAS with OpenMediaVault. Good example of
-                practical system setup and documentation.
-              </p>
-              <div class="project-links">
-                <a href="Revamping%20a%201TB%20Hard%20Drive%20into%20a%20Raspberry%20Pi%20NAS%20with%20OpenMediaVault.docx" target="_blank" rel="noreferrer">Open Write Up</a>
-              </div>
-            </article>
-
-            <article class="extra-card reveal">
-              <span class="extra-label">Presentation</span>
-              <h3>NET310 Final Presentation</h3>
-              <p>
-                A course presentation file included in the repo that adds another example of how I package and present
-                technical material.
-              </p>
-              <div class="project-links">
-                <a href="net310_emery_Final.pptx" target="_blank" rel="noreferrer">Open Presentation</a>
-              </div>
-            </article>
-
-            <article class="extra-card reveal extra-card-wide">
-              <span class="extra-label">Reading and Notes</span>
-              <h3>Book Write Ups and Reading Notes</h3>
-              <p>
-                A small collection of write ups tied to cybersecurity related books and topics. These give the site more
-                depth and show how I turn reading into notes and analysis.
-              </p>
-              <div class="resource-list">
-                <a href="Sandworm.docx" target="_blank" rel="noreferrer">Sandworm</a>
-                <a href="The%20Cuckoo.docx" target="_blank" rel="noreferrer">The Cuckoo</a>
-                <a href="Tracers%20in%20the%20Dark.docx" target="_blank" rel="noreferrer">Tracers in the Dark</a>
-                <a href="world%20end.docx" target="_blank" rel="noreferrer">The World End write up</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact section section-dark">
-        <div class="content-grid contact-grid reveal">
-          <div>
-            <p class="section-kicker">CONTACT</p>
-            <h2>Want to connect?</h2>
-            <p>
-              Use the contact page if you want to reach out, ask for my resume, or send a quick note. You can also
-              connect with me on LinkedIn, browse my GitHub, or verify certifications on Credly.
-            </p>
-          </div>
-
-          <div class="contact-actions">
-            <a class="contact-btn" href="contact.html">Resume / Contact Page</a>
-            <a class="contact-btn contact-btn-secondary" href="https://www.linkedin.com/in/austin-emery87" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="contact-btn contact-btn-secondary" href="https://github.com/G0ld8aR" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="contact-btn contact-btn-secondary" href="https://www.credly.com/users/austin-emery.a2485051/badges" target="_blank" rel="noopener noreferrer">Credly</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <p>© <span id="year"></span> Austin Emery</p>
-      <p>Hosted on Cloudflare Pages</p>
-    </footer>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="brand-mark">AE</div>
+      <div class="brand-copy">
+        <span>Austin Emery</span>
+        <span class="sub">Cybersecurity and cloud security portfolio</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="about.html">About Me</a>
+      <a href="credentials.html">Credentials</a>
+      <a href="projects.html">Projects</a>
+      <a href="extras.html">Extras</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="panel hero-copy">
+        <p class="section-kicker">Austin Emery</p>
+        <h1>Cybersecurity and cloud security portfolio built around real work.</h1>
+        <p class="lead">Navy veteran, cybersecurity student, and hands on builder focused on cloud labs, technical documentation, home lab work, and security minded problem solving.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="projects.html">View projects</a>
+          <a class="button" href="about.html">Read about me</a>
+          <a class="button" href="contact.html">Resume and contact</a>
+        </div>
+        <div class="hero-meta">
+          <div class="stat">
+            <strong>Focus</strong>
+            <span>Cloud security, infrastructure, monitoring, and documentation</span>
+          </div>
+          <div class="stat">
+            <strong>Background</strong>
+            <span>Navy veteran with an AS in Cybersecurity and ongoing BS studies</span>
+          </div>
+          <div class="stat">
+            <strong>Approach</strong>
+            <span>Calm under pressure, practical, and detail oriented</span>
+          </div>
+        </div>
+      </div>
+      <div class="panel hero-card">
+        <img class="hero-image" src="1660443429587%20(2).jpg" alt="Austin Emery headshot">
+        <div class="hero-card-body">
+          <h2 style="margin-bottom:.45rem">Austin Emery</h2>
+          <p class="muted" style="margin-bottom:.6rem">Cybersecurity • Cloud Security • Technical Writing</p>
+          <p class="small">This site is organized by section so visitors can move straight into your background, credentials, projects, and book notes without digging through one long page.</p>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/austin-emery87/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/G0ld8aR" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.credly.com/users/austin-emery.a2485051/badges" target="_blank" rel="noopener">Credly</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <section class="page page-tight">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Site map</p>
+          <h2>Explore the portfolio by section.</h2>
+          <p class="muted">Instead of stacking everything on one page, each section now has its own destination so visitors can move around the site more naturally.</p>
+        </div>
+      </div>
+      <div class="card-grid">
+        <a class="card" href="about.html">
+          <div class="eyebrow">Background</div>
+          <h3>About Me</h3>
+          <p>Military experience, education, internships, and the path that pulled you toward cloud security and cybersecurity work.</p>
+        </a>
+        <a class="card" href="credentials.html">
+          <div class="eyebrow">Education</div>
+          <h3>Credentials</h3>
+          <p>Certifications, degree progress, and the credibility pieces recruiters usually want to see first.</p>
+        </a>
+        <a class="card" href="projects.html">
+          <div class="eyebrow">Hands on work</div>
+          <h3>Projects</h3>
+          <p>A cleaner project layout with repos, write ups, and technical work opened through dedicated pages instead of downloads.</p>
+        </a>
+        <a class="card" href="extras.html">
+          <div class="eyebrow">Reading notes</div>
+          <h3>Extras</h3>
+          <p>Book reviews and takeaways that show how you connect reading back to real cybersecurity ideas.</p>
+        </a>
+        <a class="card" href="contact.html">
+          <div class="eyebrow">Reach out</div>
+          <h3>Contact</h3>
+          <p>A direct page for LinkedIn, GitHub, Credly, and resume requests.</p>
+        </a>
+        <div class="card">
+          <div class="eyebrow">Built on Git</div>
+          <h3>Cloudflare Pages workflow</h3>
+          <p>The site source lives in GitHub and deploys through Cloudflare Pages, which keeps updates simple and version controlled.</p>
+          <div class="link-row">
+            <a href="https://github.com/G0ld8aR/austin-emery.com" target="_blank" rel="noopener">Site repository</a>
+            <a href="https://austin-emery.com" target="_blank" rel="noopener">Live site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer-row">
+    <div>© Austin Emery</div>
+    <div>Hosted on Cloudflare Pages</div>
+  </div>
+</footer>
 </body>
 </html>

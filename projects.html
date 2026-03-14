@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Austin Emery</title>
+  <meta name="description" content="Austin Emery portfolio website covering cybersecurity, cloud security, projects, certifications, and technical writing.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="brand-mark">AE</div>
+      <div class="brand-copy">
+        <span>Austin Emery</span>
+        <span class="sub">Cybersecurity and cloud security portfolio</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="about.html">About Me</a>
+      <a href="credentials.html">Credentials</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="extras.html">Extras</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="container">
+    <a class="back-link" href="index.html">← Back to home</a>
+    <div class="section-head">
+      <div>
+        <p class="section-kicker">Projects</p>
+        <h1 style="font-size:clamp(2rem,4vw,3.4rem)">Projects and technical write ups.</h1>
+        <p class="muted">The write ups now open through their own pages so visitors can stay inside the site instead of downloading Word documents.</p>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <article class="card">
+        <div class="eyebrow">Web portfolio</div>
+        <h3>Portfolio website</h3>
+        <p>The Cloudflare Pages site you are on now. Built to serve as a cleaner front door to your work, certifications, and technical writing.</p>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Cloudflare Pages</span>
+        </div>
+        <div class="link-row">
+          <a href="https://austin-emery.com" target="_blank" rel="noopener">Live site</a>
+          <a href="https://github.com/G0ld8aR/austin-emery.com" target="_blank" rel="noopener">Repository</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="eyebrow">IoT and embedded systems</div>
+        <h3>ESP32 solar weather station</h3>
+        <p>A custom weather station build centered on ESP32 hardware, sensors, field wiring, power planning, and iterative hardware troubleshooting.</p>
+        <div class="tags">
+          <span>ESP32</span><span>LoRa</span><span>Sensors</span><span>Hardware debugging</span>
+        </div>
+        <div class="link-row">
+          <a href="https://github.com/G0ld8aR/Weather-Station-IoT" target="_blank" rel="noopener">Repository</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="eyebrow">AWS lab</div>
+        <h3>AWS VPC Lab Experience</h3>
+        <p>Hands on VPC work covering CIDR planning, public and private subnets, route tables, and EC2 deployment inside a secure network layout.</p>
+        <div class="tags">
+          <span>AWS</span><span>VPC</span><span>Networking</span><span>Technical writing</span>
+        </div>
+        <div class="link-row">
+          <a href="writeups/aws-vpc-lab.html">Open write up</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="eyebrow">Infrastructure as code</div>
+        <h3>AWS CloudFormation write up</h3>
+        <p>A summary page for the CloudFormation lab focused on StackSets, reusable infrastructure components, IAM roles, and instance updates across regions.</p>
+        <div class="tags">
+          <span>AWS</span><span>CloudFormation</span><span>IaC</span><span>StackSets</span>
+        </div>
+        <div class="link-row">
+          <a href="writeups/aws-cloudformation.html">Open write up</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="eyebrow">Home lab</div>
+        <h3>Raspberry Pi NAS with OpenMediaVault</h3>
+        <p>A practical storage project that repurposed a 1TB external hard drive into a Raspberry Pi NAS, including troubleshooting around networking and setup.</p>
+        <div class="tags">
+          <span>Raspberry Pi</span><span>OpenMediaVault</span><span>Storage</span><span>Troubleshooting</span>
+        </div>
+        <div class="link-row">
+          <a href="writeups/raspberry-pi-nas.html">Open write up</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-row">
+    <div>© Austin Emery</div>
+    <div>Hosted on Cloudflare Pages</div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aws Vpc Lab | Austin Emery</title>
+  <meta name="description" content="Austin Emery portfolio website covering cybersecurity, cloud security, projects, certifications, and technical writing.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="brand-mark">AE</div>
+      <div class="brand-copy">
+        <span>Austin Emery</span>
+        <span class="sub">Cybersecurity and cloud security portfolio</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="about.html">About Me</a>
+      <a href="credentials.html">Credentials</a>
+      <a href="projects.html">Projects</a>
+      <a href="extras.html">Extras</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="container article-shell">
+    <article class="panel article">
+      <a class="back-link" href="../projects.html">← Back to projects</a>
+      <p class="section-kicker">AWS Lab Write Up</p>
+      <h1 style="font-size:clamp(2rem,4vw,3.2rem)">AWS VPC Lab Experience</h1>
+      <p>I recently completed a Udemy lab where I set up a custom AWS Virtual Private Cloud to support EC2 deployments. The goal was to create a secure and scalable network by designing public and private subnets, assigning route tables, and making sure the environment supported clean traffic flow.</p>
+      <h2 style="font-size:1.4rem">Getting started</h2>
+      <p>Before jumping into the lab, I sketched out the VPC on paper first. That made it easier to plan CIDR ranges, think through subnet placement, and understand how the pieces should talk to each other before I started clicking through AWS.</p>
+      <h2 style="font-size:1.4rem">What I built</h2>
+      <p>In the lab, I created the VPC, added public and private subnets, configured route tables, and launched EC2 instances to test connectivity. The public subnet had auto assigned public IPs and a route to the internet gateway, while the private subnet stayed more restricted for security.</p>
+      <h2 style="font-size:1.4rem">Key takeaway</h2>
+      <p>The biggest takeaway was that networking is not just background plumbing in cloud. It is a core security layer. Sketching the network ahead of time helped me understand subnetting and CIDR planning better, and trying each step before checking the walkthrough forced me to think more critically about how AWS networking actually works.</p>
+      <p>Overall, it was a solid hands on lab and another step forward in my cloud security track.</p>
+    </article>
+    <aside class="panel article">
+      <p class="section-kicker">Topics</p>
+      <div class="tags"><span>AWS</span><span>VPC</span><span>Subnets</span><span>Route tables</span><span>EC2</span><span>Cloud security</span></div>
+    </aside>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-row">
+    <div>© Austin Emery</div>
+    <div>Hosted on Cloudflare Pages</div>
+  </div>
+</footer>
+</body>
+</html>
