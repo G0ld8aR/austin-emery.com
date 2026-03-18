@@ -8,19 +8,21 @@
     </p>
 
     <div class="contact-links">
-     <a
-  href="https://www.linkedin.com/in/austin-emery87/"
-  target="_blank"
-  rel="noreferrer"
-  class="icon-link"
-  aria-label="View LinkedIn"
-  title="View LinkedIn"
->
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.22 8.98h4.54V24H.22V8.98zM8.5 8.98h4.35v2.05h.06c.61-1.15 2.1-2.36 4.33-2.36 4.63 0 5.48 3.05 5.48 7.02V24h-4.54v-7.46c0-1.78-.03-4.07-2.48-4.07-2.48 0-2.86 1.94-2.86 3.94V24H8.5V8.98z"/>
-  </svg>
-</a>
+      <!-- LinkedIn -->
+      <a
+        href="https://www.linkedin.com/in/austin-emery87/"
+        target="_blank"
+        rel="noreferrer"
+        class="icon-link"
+        aria-label="View LinkedIn"
+        title="View LinkedIn"
+      >
+        <svg viewBox="0 0 24 24">
+          <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.22 8.98h4.54V24H.22V8.98zM8.5 8.98h4.35v2.05h.06c.61-1.15 2.1-2.36 4.33-2.36 4.63 0 5.48 3.05 5.48 7.02V24h-4.54v-7.46c0-1.78-.03-4.07-2.48-4.07-2.48 0-2.86 1.94-2.86 3.94V24H8.5V8.98z"/>
+        </svg>
+      </a>
 
+      <!-- GitHub -->
       <a
         href="https://github.com/G0ld8aR"
         target="_blank"
@@ -29,11 +31,12 @@
         aria-label="View GitHub"
         title="View GitHub"
       >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
           <path d="M12 .5C5.65.5.5 5.65.5 12A11.5 11.5 0 0 0 8.36 22.93c.58.1.79-.25.79-.56v-1.97c-3.18.69-3.85-1.35-3.85-1.35-.52-1.31-1.27-1.66-1.27-1.66-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.74 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.52-2.54-.29-5.2-1.27-5.2-5.66 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.73.8 1.18 1.83 1.18 3.08 0 4.4-2.66 5.37-5.21 5.66.41.35.77 1.03.77 2.08v3.08c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
         </svg>
       </a>
 
+      <!-- Credly -->
       <a
         href="https://www.credly.com/"
         target="_blank"
@@ -42,7 +45,7 @@
         aria-label="View Credly"
         title="View Credly"
       >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
           <path d="M12 1.5 3 6v12l9 4.5L21 18V6l-9-4.5Zm0 2.2 6.8 3.4L12 10.5 5.2 7.1 12 3.7Zm-7 5.3 6 3v8.1l-6-3V9Zm8 11.1v-8.1l6-3v8.1l-6 3Z"/>
         </svg>
       </a>
@@ -99,7 +102,6 @@
       radial-gradient(circle at top left, rgba(34, 77, 160, 0.18), transparent 32%),
       linear-gradient(180deg, #0f1d3c 0%, #0a1430 100%);
     color: #f4f7ff;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
   }
 
   .back-link {
@@ -119,46 +121,33 @@
   .contact-card h1,
   .contact-card h2 {
     margin: 0 0 1rem;
-    line-height: 1.05;
     font-size: clamp(2rem, 3vw, 3.1rem);
   }
 
   .contact-copy {
-    max-width: 36rem;
     color: #edf3ff;
-    line-height: 1.7;
     margin-bottom: 1.4rem;
   }
 
   .contact-links {
     display: flex;
     gap: 0.85rem;
-    flex-wrap: wrap;
   }
 
   .icon-link {
     width: 58px;
     height: 58px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 999px;
+    border-radius: 50%;
     border: 1px solid rgba(135, 170, 255, 0.28);
-    background: linear-gradient(180deg, rgba(33, 61, 118, 0.9), rgba(21, 35, 70, 0.95));
-    text-decoration: none;
-    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-  }
-
-  .icon-link:hover {
-    transform: translateY(-1px);
-    border-color: rgba(173, 199, 255, 0.5);
-    background: linear-gradient(180deg, rgba(42, 75, 145, 0.95), rgba(24, 41, 81, 0.98));
   }
 
   .icon-link svg {
     width: 24px;
     height: 24px;
-    fill: #ffffff;
+    fill: #fff;
   }
 
   .draft-form {
@@ -168,121 +157,67 @@
 
   .row {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 0.9rem;
   }
 
-  .draft-form label {
-    display: grid;
-    gap: 0.45rem;
-  }
-
-  .draft-form span {
-    font-weight: 700;
-    color: #f0f5ff;
-  }
-
-  .draft-form input,
-  .draft-form textarea {
+  input, textarea {
     width: 100%;
-    border-radius: 16px;
-    border: 1px solid rgba(135, 170, 255, 0.18);
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: none;
     background: #09142d;
-    color: #f4f7ff;
-    padding: 0.95rem 1rem;
-    outline: none;
-  }
-
-  .draft-form input::placeholder,
-  .draft-form textarea::placeholder {
-    color: #92addf;
-  }
-
-  .draft-form input:focus,
-  .draft-form textarea:focus {
-    border-color: rgba(156, 190, 255, 0.45);
+    color: white;
   }
 
   .actions {
     display: flex;
     gap: 0.9rem;
-    flex-wrap: wrap;
-  }
-
-  .primary-btn,
-  .secondary-btn {
-    min-width: 140px;
-    padding: 0.95rem 1.2rem;
-    border-radius: 999px;
-    border: 1px solid rgba(135, 170, 255, 0.22);
-    font-weight: 700;
-    cursor: pointer;
   }
 
   .primary-btn {
-    background: linear-gradient(180deg, #355f9f, #2b4f87);
-    color: #fff;
+    background: #5c6470;
+    color: white;
+    border-radius: 999px;
+    padding: 0.8rem 1.2rem;
+    border: none;
   }
 
   .primary-btn:disabled {
-    background: #5c6470;
-    color: rgba(255, 255, 255, 0.72);
-    border-color: rgba(255, 255, 255, 0.08);
-    cursor: not-allowed;
-    opacity: 0.8;
+    opacity: 0.7;
   }
 
   .secondary-btn {
-    background: rgba(255, 255, 255, 0.04);
-    color: #fff;
-  }
-
-  @media (max-width: 900px) {
-    .contact-grid,
-    .row {
-      grid-template-columns: 1fr;
-    }
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    border-radius: 999px;
+    padding: 0.8rem 1.2rem;
   }
 </style>
 
 <script>
   const form = document.getElementById("contactForm");
-  const emailBtn = document.getElementById("emailBtn");
-  const requiredFields = [...form.querySelectorAll("input[required], textarea[required]")];
+  const btn = document.getElementById("emailBtn");
+  const fields = form.querySelectorAll("input, textarea");
 
-  const updateButtonState = () => {
-    const allFilled = requiredFields.every((field) => field.value.trim() !== "");
-    const emailValid = document.getElementById("email").checkValidity();
-    emailBtn.disabled = !(allFilled && emailValid);
-  };
+  function checkForm() {
+    const valid = [...fields].every(f => f.value.trim() !== "");
+    btn.disabled = !valid;
+  }
 
-  requiredFields.forEach((field) => {
-    field.addEventListener("input", updateButtonState);
-    field.addEventListener("change", updateButtonState);
-  });
-
-  form.addEventListener("reset", () => {
-    setTimeout(updateButtonState, 0);
-  });
+  fields.forEach(f => f.addEventListener("input", checkForm));
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const subject = document.getElementById("subject").value.trim();
-    const message = document.getElementById("message").value.trim();
+    const subject = encodeURIComponent(document.getElementById("subject").value);
+    const body = encodeURIComponent(
+      "Name: " + document.getElementById("name").value + "\n" +
+      "Email: " + document.getElementById("email").value + "\n\n" +
+      document.getElementById("message").value
+    );
 
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      ``,
-      message
-    ].join("\n");
-
-    window.location.href =
-      `mailto:afemery87@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:afemery87@gmail.com?subject=${subject}&body=${body}`;
   });
-
-  updateButtonState();
 </script>
