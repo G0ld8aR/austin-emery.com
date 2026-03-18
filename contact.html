@@ -199,14 +199,25 @@
 <script>
   const form = document.getElementById("contactForm");
   const btn = document.getElementById("emailBtn");
-  const fields = form.querySelectorAll("input, textarea");
+  const fields = form.querySelectorAll("input[required], textarea[required]");
 
   function checkForm() {
-    const valid = [...fields].every(f => f.value.trim() !== "");
-    btn.disabled = !valid;
+    const allFilled = [...fields].every((field) => field.value.trim() !== "");
+    const emailField = document.getElementById("email");
+    const emailValid = emailField.checkValidity();
+
+    btn.disabled = !(allFilled && emailValid);
   }
 
-  fields.forEach(f => f.addEventListener("input", checkForm));
+  fields.forEach((field) => {
+    field.addEventListener("input", checkForm);
+    field.addEventListener("change", checkForm);
+    field.addEventListener("blur", checkForm);
+  });
+
+  form.addEventListener("reset", () => {
+    setTimeout(checkForm, 0);
+  });
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -220,4 +231,6 @@
 
     window.location.href = `mailto:afemery87@gmail.com?subject=${subject}&body=${body}`;
   });
+
+  checkForm();
 </script>
