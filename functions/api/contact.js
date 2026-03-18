@@ -67,20 +67,37 @@ export async function onRequestPost(context) {
       await env.CONTACT_RATE_LIMIT_KV.put(key, "1", { expirationTtl: 60 });
     }
 
-    const resendPayload = {
-      from: env.CONTACT_FROM_EMAIL,
-      to: [env.CONTACT_TO_EMAIL],
-      reply_to: email,
-      subject: subject,
-      text:
+    const escapedMessage = escapeHtml(message).replace(/\n/g, "<br>");
+const escapedName = escapeHtml(name);
+const escapedEmail = escapeHtml(email);
+const escapedSubject = escapeHtml(subject);
+
+const resendPayload = {
+  from: env.CONTACT_FROM_EMAIL,
+  to: [env.CONTACT_TO_EMAIL],
+  reply_to: email,
+  subject: subject,
+  text:
 `New portfolio contact form message
 
 Name: ${name}
 Email: ${email}
 
 Message:
-${message}`
-    };
+${message}`,
+  html: `
+    <div style="font-family:Arial,sans-serif;line-height:1.6;color:#111">
+      <h2 style="margin-bottom:16px;">New Portfolio Message</h2>
+      <p><strong>Name:</strong> ${escapedName}</p>
+      <p><strong>Email:</strong> ${escapedEmail}</p>
+      <p><strong>Subject:</strong> ${escapedSubject}</p>
+      <p><strong>Message:</strong></p>
+      <div style="padding:12px 14px;border:1px solid #ddd;border-radius:8px;background:#fafafa;">
+        ${escapedMessage}
+      </div>
+    </div>
+  `
+};
 
     const resendResp = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -118,4 +135,12 @@ function json(data, status = 200) {
       "Cache-Control": "no-store"
     }
   });
+}
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
