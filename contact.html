@@ -11,6 +11,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="icon" href="favicon.ico">
   <link rel="manifest" href="site.webmanifest">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 <header class="topbar">
@@ -34,7 +35,6 @@
 
 <main class="page">
   <div class="container split contact-layout">
-
     <section class="panel article contact-copy-panel">
       <a class="back-link" href="index.html">← Back to home</a>
       <p class="section-kicker">Contact</p>
@@ -42,47 +42,66 @@
       <p>I am always open to connecting around cybersecurity, cloud security, technical projects, or opportunities where I can keep building practical experience.</p>
 
       <div class="contact-actions">
-        <a class="button primary" href="https://www.linkedin.com/in/austin-emery87/" target="_blank">LinkedIn</a>
-        <a class="button" href="https://github.com/G0ld8aR" target="_blank">GitHub</a>
-        <a class="button" href="https://www.credly.com/users/austin-emery.a2485051/badges" target="_blank">Credly</a>
+        <a class="button primary" href="https://www.linkedin.com/in/austin-emery87/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="button" href="https://github.com/G0ld8aR" target="_blank" rel="noopener">GitHub</a>
+        <a class="button" href="https://www.credly.com/users/austin-emery.a2485051/badges" target="_blank" rel="noopener">Credly</a>
       </div>
     </section>
 
     <section class="panel contact-box contact-form-box">
       <div class="form-header">
-        <p class="section-kicker">Message</p>
-        <h2>Write your message</h2>
+        <p class="section-kicker">Message draft</p>
+        <h2>Write something clean and send it fast</h2>
       </div>
 
-      <form id="contact-form" class="contact-form">
+      <form id="contact-form" class="contact-form" novalidate>
         <div class="form-row two-up">
           <label>
             <span>Name</span>
-            <input type="text" name="name" placeholder="Your name" required>
+            <input type="text" name="name" placeholder="Your name" required maxlength="120">
           </label>
           <label>
             <span>Email</span>
-            <input type="email" name="email" placeholder="you@example.com" required>
+            <input type="email" name="email" placeholder="you@example.com" required maxlength="190">
           </label>
         </div>
 
         <label>
           <span>Subject</span>
-          <input type="text" name="subject" placeholder="What are you reaching out about?" required>
+          <input type="text" name="subject" placeholder="What are you reaching out about?" required maxlength="180">
         </label>
 
         <label>
           <span>Message</span>
-          <textarea name="message" rows="7" placeholder="Write your message here" required></textarea>
+          <textarea name="message" rows="7" placeholder="Write your message here" required maxlength="5000"></textarea>
         </label>
 
-        <div class="form-actions">
-          <button class="button primary" type="submit">Email me</button>
-          <button class="button" type="reset">Clear</button>
+        <!-- Honeypot -->
+        <input
+          type="text"
+          name="company"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+          style="position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none;"
+        >
+
+        <!-- Turnstile -->
+        <div
+          class="cf-turnstile"
+          data-sitekey="0x4AAAAAACsyrWzRThe-T2D4"
+          data-theme="dark"
+          data-size="flexible">
         </div>
+
+        <div class="form-actions">
+          <button class="button primary" type="submit" id="send-button" disabled>Email me</button>
+          <button class="button" type="reset" id="clear-form">Clear</button>
+        </div>
+
+        <p id="contact-feedback" class="small muted contact-feedback" role="status" aria-live="polite"></p>
       </form>
     </section>
-
   </div>
 </main>
 
@@ -94,19 +113,77 @@
 </footer>
 
 <script>
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-  e.preventDefault();
+  const form = document.getElementById("contact-form");
+  const sendButton = document.getElementById("send-button");
+  const feedback = document.getElementById("contact-feedback");
+  const requiredFields = Array.from(form.querySelectorAll("input[required], textarea[required]"));
 
-  const name = this.name.value;
-  const email = this.email.value;
-  const subject = this.subject.value;
-  const message = this.message.value;
+  function canSubmit() {
+    const fieldsFilled = requiredFields.every((field) => field.value.trim() !== "");
+    const emailField = form.querySelector('input[name="email"]');
+    const emailValid = emailField.checkValidity();
+    const turnstileToken = form.querySelector('input[name="cf-turnstile-response"]');
+    const hasTurnstile = turnstileToken && turnstileToken.value.trim() !== "";
+    return fieldsFilled && emailValid && hasTurnstile;
+  }
 
-  const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${message}`;
+  function updateButtonState() {
+    sendButton.disabled = !canSubmit();
+  }
 
-  window.location.href = `mailto:afemery87@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-});
+  requiredFields.forEach((field) => {
+    field.addEventListener("input", updateButtonState);
+    field.addEventListener("change", updateButtonState);
+    field.addEventListener("blur", updateButtonState);
+  });
+
+  form.addEventListener("reset", () => {
+    feedback.textContent = "";
+    setTimeout(() => {
+      if (window.turnstile) {
+        const widget = document.querySelector(".cf-turnstile");
+        if (widget) turnstile.reset(widget);
+      }
+      updateButtonState();
+    }, 0);
+  });
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!canSubmit()) {
+      feedback.textContent = "Please complete all fields and verify the spam check.";
+      return;
+    }
+
+    sendButton.disabled = true;
+    feedback.textContent = "Sending...";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Unable to send message.");
+      }
+
+      feedback.textContent = "Message sent.";
+      form.reset();
+    } catch (error) {
+      feedback.textContent = error.message || "Something went wrong.";
+      updateButtonState();
+    }
+  });
+
+  // Turnstile renders asynchronously, so watch for its hidden field being added/updated.
+  const observer = new MutationObserver(updateButtonState);
+  observer.observe(form, { childList: true, subtree: true });
+  updateButtonState();
 </script>
-
 </body>
 </html>
