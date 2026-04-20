@@ -10,19 +10,17 @@ export async function onRequest(context) {
   }
 
   // ===== POST FRWOM CROW
-  if (request.method === "POST") {
-    const body = await request.json();
+ if (request.method === "POST") {
+  const body = await request.json();
 
-    // Token check
-    if (body.token !== env.WEATHER_TOKEN) {
-      return new Response("Unauthorized", { status: 401 });
-    }
-
-    //  Save latest weather
-    await env.WEATHER_KV.put("latest", JSON.stringify(body));
-
-    return new Response("ok");
+  if (body.token !== env.WEATHER_TOKEN) {
+    return new Response("Unauthorized", { status: 401 });
   }
 
-  return new Response("Method not allowed", { status: 405 });
+  // 🔒 Remove token before storing
+  delete body.token;
+
+  await env.WEATHER_KV.put("latest", JSON.stringify(body));
+
+  return new Response("ok");
 }
