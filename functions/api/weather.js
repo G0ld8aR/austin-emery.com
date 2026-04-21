@@ -459,39 +459,47 @@ function renderHtml(data) {
         return [x, y];
       });
 
-      const line = coords.map((c, i) => `${i === 0 ? 'M' : 'L'} ${c[0]} ${c[1]}`).join(' ');
-      const area = `${line} L ${coords[coords.length - 1][0]} ${h - pad.bottom} L ${coords[0][0]} ${h - pad.bottom} Z`;
+      const line = coords.map((c, i) => {
+  return (i === 0 ? 'M ' : 'L ') + c[0] + ' ' + c[1];
+}).join(' ');
 
-      const grid = Array.from({ length: 5 }).map((_, i) => {
-        const y = pad.top + (i / 4) * innerH;
-        const val = (max - (i / 4) * range).toFixed(0);
-        return `
-          <line x1="${pad.left}" y1="${y}" x2="${w - pad.right}" y2="${y}" stroke="#d8dee6" stroke-dasharray="5 6" />
-          <text x="8" y="${y + 5}" fill="#5d6875" font-size="14">${val}</text>
-        `;
-      }).join('');
+const area =
+  line +
+  ' L ' + coords[coords.length - 1][0] + ' ' + (h - pad.bottom) +
+  ' L ' + coords[0][0] + ' ' + (h - pad.bottom) +
+  ' Z';
 
-      const xLabels = [0, .25, .5, .75, 1].map((p) => {
-        const idx = Math.min(points.length - 1, Math.round((points.length - 1) * p));
-        const d = new Date(points[idx].t);
-        const label = Number.isNaN(d.getTime()) ? '' : d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
-        const x = pad.left + p * innerW;
-        return `<text x="${x}" y="${h - 10}" text-anchor="middle" fill="#5d6875" font-size="14">${label}</text>`;
-      }).join('');
+const grid = Array.from({ length: 5 }).map((_, i) => {
+  const y = pad.top + (i / 4) * innerH;
+  const val = (max - (i / 4) * range).toFixed(0);
+  return '<line x1="' + pad.left + '" y1="' + y + '" x2="' + (w - pad.right) + '" y2="' + y + '" stroke="#d8dee6" stroke-dasharray="5 6" />' +
+         '<text x="8" y="' + (y + 5) + '" fill="#5d6875" font-size="14">' + val + '</text>';
+}).join('');
 
-      svg.innerHTML = `
-        <defs>
-          <linearGradient id="fillBlue" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%" stop-color="rgba(53,114,239,.28)"/>
-            <stop offset="100%" stop-color="rgba(53,114,239,.06)"/>
-          </linearGradient>
-        </defs>
-        ${grid}
-        <path d="${area}" fill="url(#fillBlue)"></path>
-        <path d="${line}" fill="none" stroke="#1d5fd1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-        ${coords.map(c => `<circle cx="${c[0]}" cy="${c[1]}" r="2.2" fill="#1d5fd1"></circle>`).join('')}
-        ${xLabels}
-      `;
+const xLabels = [0, .25, .5, .75, 1].map((p) => {
+  const idx = Math.min(points.length - 1, Math.round((points.length - 1) * p));
+  const d = new Date(points[idx].t);
+  const label = Number.isNaN(d.getTime()) ? '' : d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+  const x = pad.left + p * innerW;
+  return '<text x="' + x + '" y="' + (h - 10) + '" text-anchor="middle" fill="#5d6875" font-size="14">' + label + '</text>';
+}).join('');
+
+const circles = coords.map((c) => {
+  return '<circle cx="' + c[0] + '" cy="' + c[1] + '" r="2.2" fill="#1d5fd1"></circle>';
+}).join('');
+
+svg.innerHTML =
+  '<defs>' +
+    '<linearGradient id="fillBlue" x1="0" x2="0" y1="0" y2="1">' +
+      '<stop offset="0%" stop-color="rgba(53,114,239,.28)"/>' +
+      '<stop offset="100%" stop-color="rgba(53,114,239,.06)"/>' +
+    '</linearGradient>' +
+  '</defs>' +
+  grid +
+  '<path d="' + area + '" fill="url(#fillBlue)"></path>' +
+  '<path d="' + line + '" fill="none" stroke="#1d5fd1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>' +
+  circles +
+  xLabels;
     }
 
     render(initialData);
