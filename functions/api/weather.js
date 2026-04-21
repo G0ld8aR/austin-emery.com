@@ -398,7 +398,7 @@ function renderHtml(data) {
         <svg id="chart" viewBox="0 0 1200 340" preserveAspectRatio="none" aria-label="24 hour temperature trend chart"></svg>
       </section>
 
-      <div class="footer">Data from Heltech ESP32 Weather Station via BLE</div>
+      <div class="footer">Built by Austin Emery • ESP32 + Cloudflare Weather System | Designed with a decoupled architecture separating low-power sensor transmission from cloud ingestion, improving reliability and energy efficiency. </div>
     </div>
   </div>
 
