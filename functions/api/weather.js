@@ -153,34 +153,34 @@ function renderHtml(data) {
   <title>Heltec ESP32 Weather Node</title>
   <style>
     :root {
-      --bg: #f3f5f7;
-      --panel: #ffffff;
-      --text: #101418;
-      --muted: #5d6875;
-      --line: #d8dee6;
-      --shadow: 0 10px 30px rgba(16,20,24,.08);
+      --bg: #0b1220;
+      --panel: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --line: #263244;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
       --radius: 22px;
-    }
+}
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(180deg, #f7f9fb 0%, #eef2f6 100%);
+      background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
       color: var(--text);
-    }
+}
     .wrap {
       max-width: 1400px;
       margin: 0 auto;
       padding: 28px;
     }
     .shell {
-      background: rgba(255,255,255,.74);
+      background: rgba(17,24,39,.82);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,.7);
+      border: 1px solid rgba(148,163,184,.12);
       border-radius: 30px;
       box-shadow: var(--shadow);
       padding: 28px;
-    }
+}
     h1 {
       margin: 0;
       text-align: center;
@@ -211,10 +211,10 @@ function renderHtml(data) {
     .label {
       font-size: .95rem;
       letter-spacing: .04em;
-      color: #2f3944;
+      color: #cbd5e1;
       text-transform: uppercase;
       margin-bottom: 18px;
-    }
+}
     .metric-row {
       display: flex;
       align-items: center;
@@ -287,8 +287,8 @@ function renderHtml(data) {
       font-weight: 700;
       font-size: 1.1rem;
     }
-    .minmax span:first-child { color: #235fd1; }
-    .minmax span:last-child { color: #d12b2b; }
+    .minmax span:first-child { color: #60a5fa; }
+    .minmax span:last-child { color: #f87171; }
     svg {
       width: 100%;
       height: auto;
@@ -314,7 +314,7 @@ function renderHtml(data) {
 <body>
   <div class="wrap">
     <div class="shell">
-      <h1>Heltech ESP32 Weather Node</h1>
+      <h1>Heltec ESP32 Weather Node</h1>
       <div class="sub">Last Updated: <span id="lastUpdated"></span> (Last Packet)</div>
 
       <section class="grid-top">
@@ -398,7 +398,7 @@ function renderHtml(data) {
         <svg id="chart" viewBox="0 0 1200 340" preserveAspectRatio="none" aria-label="24 hour temperature trend chart"></svg>
       </section>
 
-      <div class="footer">Built by Austin Emery • ESP32 + Cloudflare Weather System | Designed with a decoupled architecture separating low-power sensor transmission from cloud ingestion, improving reliability and energy efficiency. </div>
+      <div class="footer">Built by Austin Emery • ESP32 + Cloudflare Weather System  </div>
     </div>
   </div>
 
@@ -472,8 +472,8 @@ const area =
 const grid = Array.from({ length: 5 }).map((_, i) => {
   const y = pad.top + (i / 4) * innerH;
   const val = (max - (i / 4) * range).toFixed(0);
-  return '<line x1="' + pad.left + '" y1="' + y + '" x2="' + (w - pad.right) + '" y2="' + y + '" stroke="#d8dee6" stroke-dasharray="5 6" />' +
-         '<text x="8" y="' + (y + 5) + '" fill="#5d6875" font-size="14">' + val + '</text>';
+  return '<line x1="' + pad.left + '" y1="' + y + '" x2="' + (w - pad.right) + '" y2="' + y + '" stroke="#334155" stroke-dasharray="5 6" />' +
+         '<text x="8" y="' + (y + 5) + '" fill="#94a3b8" font-size="14">' + val + '</text>';
 }).join('');
 
 const xLabels = [0, .25, .5, .75, 1].map((p) => {
@@ -481,11 +481,11 @@ const xLabels = [0, .25, .5, .75, 1].map((p) => {
   const d = new Date(points[idx].t);
   const label = Number.isNaN(d.getTime()) ? '' : d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
   const x = pad.left + p * innerW;
-  return '<text x="' + x + '" y="' + (h - 10) + '" text-anchor="middle" fill="#5d6875" font-size="14">' + label + '</text>';
+  return '<text x="' + x + '" y="' + (h - 10) + '" text-anchor="middle" fill="#94a3b8" font-size="14">' + label + '</text>';
 }).join('');
 
 const circles = coords.map((c) => {
-  return '<circle cx="' + c[0] + '" cy="' + c[1] + '" r="2.2" fill="#1d5fd1"></circle>';
+  return '<circle cx="' + c[0] + '" cy="' + c[1] + '" r="2.2" fill="#60a5fa"></circle>';
 }).join('');
 
 svg.innerHTML =
@@ -497,7 +497,7 @@ svg.innerHTML =
   '</defs>' +
   grid +
   '<path d="' + area + '" fill="url(#fillBlue)"></path>' +
-  '<path d="' + line + '" fill="none" stroke="#1d5fd1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>' +
+  '<path d="' + line + '" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>' +
   circles +
   xLabels;
     }
