@@ -31,29 +31,53 @@
     </nav>
   </div>
 </header>
+
 <main class="page">
   <div class="container">
     <a class="back-link" href="index.html">← Back to home</a>
+
     <div class="section-head">
       <div>
         <p class="section-kicker">Projects</p>
-        <h1 style="font-size:clamp(2rem,4vw,3.4rem)">Projects and technical write ups.</h1>        
+        <h1 style="font-size:clamp(2rem,4vw,3.4rem)">
+          Projects and technical write ups.
+        </h1>
       </div>
     </div>
 
     <div class="card-grid">
-            <article class="card">
+
+      <!-- WEATHER STATION CARD -->
+      <article class="card">
         <div class="eyebrow">IoT and embedded systems</div>
+
+        <!-- CLICKABLE IMAGE + LIVE BADGE -->
+        <div class="project-img-wrap">
+          <a href="https://austin-emery.com/api/weather" target="_blank" rel="noopener">
+            <img src="/assets/images/weather-dashboard.png" 
+                 alt="Heltec ESP32 Weather Node Dashboard"
+                 class="project-img">
+            <span class="live-badge">LIVE</span>
+          </a>
+        </div>
+
         <h3>ESP32 solar weather station</h3>
-        <p>A custom weather station build centered on ESP32 hardware, sensors, field wiring, power planning, and iterative hardware troubleshooting.</p>
+
+        <p>
+          A custom weather station build centered on ESP32 hardware, sensors, field wiring, power planning, and iterative hardware troubleshooting.
+        </p>
+
         <div class="tags">
           <span>ESP32</span><span>LoRa</span><span>Sensors</span><span>Hardware debugging</span>
         </div>
+
         <div class="link-row">
           <a href="https://github.com/G0ld8aR/Weather-Station-IoT" target="_blank" rel="noopener">Repository</a>
+          <a href="https://austin-emery.com/api/weather" target="_blank" rel="noopener">Live dashboard</a>
         </div>
       </article>
 
+      <!-- OTHER PROJECTS -->
       <article class="card">
         <div class="eyebrow">AWS lab</div>
         <h3>AWS VPC Lab Experience</h3>
@@ -86,14 +110,16 @@
           <span>Raspberry Pi</span><span>OpenMediaVault</span><span>Storage</span><span>Troubleshooting</span>
         </div>
         <div class="link-row">
-  <a href="/assets/docs/revamp-nas.pdf" target="_blank" rel="noopener">
-    View full project
-  </a>
-</div>
+          <a href="/assets/docs/revamp-nas.pdf" target="_blank" rel="noopener">
+            View full project
+          </a>
+        </div>
       </article>
+
     </div>
   </div>
 </main>
+
 <footer class="footer">
   <div class="container footer-row">
     <div>© Austin Emery</div>
