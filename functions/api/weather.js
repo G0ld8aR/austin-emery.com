@@ -423,6 +423,10 @@ function renderHtml(data) {
       const temps = history.map(p => Number(p.temp_f)).filter(Number.isFinite);
       const min = temps.length ? Math.min(...temps) : Number(data.temp_f || 0);
       const max = temps.length ? Math.max(...temps) : Number(data.temp_f || 0);
+      const age = Date.now() - new Date(data.timestamp).getTime();
+if (age > 5 * 60 * 1000) {
+  document.body.style.opacity = 0.6;
+}
       setText('minTemp', fmt1(min));
       setText('maxTemp', fmt1(max));
       drawChart(history);
@@ -497,7 +501,7 @@ svg.innerHTML =
   '</defs>' +
   grid +
   '<path d="' + area + '" fill="url(#fillBlue)"></path>' +
-  '<path d="' + line + '" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>' +
+  '<path d="' + line + '" fill="none" stroke="#60a5fa" filter="drop-shadow(0 0 6px rgba(96,165,250,.4))" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>' +
   circles +
   xLabels;
     }
